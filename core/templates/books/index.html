@@ -20,11 +20,11 @@
           alt="A skater boy book"
         />
       </div>
-      <h2 class="card-title">{{ book.name }}</h2>
+          <h2 class="card-title">{{ book.title }}</h2>
       {% if book.age > 0 %}
-      <p>A {{ book.age }} year old {{ book.breed }}</p>
+          <p>A {{ book.pages }} pages book by {{ book.author }}</p>
       {% else %}
-      <p>A {{ book.breed }} kitten.</p>
+
       {% endif %}
       <p><small>{{ book.description }}</small></p>
     </div>
