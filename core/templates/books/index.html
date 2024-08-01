@@ -12,23 +12,25 @@
 
 <section class="card-container">
   {% for book in books %}
-  <div class="card">
-    <div class="card-content">
-      <div class="card-img-container">
-        <img
-          src="{% static 'images/sk8r-boi-cat.svg' %}"
-          alt="A skater boy book"
-        />
-      </div>
+    <div class="card">
+      <a href="{% url 'book-detail' book.id %}">
+        <div class="card-content">
+          <div class="card-img-container">
+            <img
+              src="{% static 'images/sk8r-boi-cat.svg' %}"
+              alt="A skater boy book"
+            />
+          </div>
           <h2 class="card-title">{{ book.title }}</h2>
-      {% if book.age > 0 %}
+          {% if book.age > 0 %}
           <p>A {{ book.pages }} pages book by {{ book.author }}</p>
-      {% else %}
+          {% else %}
 
-      {% endif %}
-      <p><small>{{ book.description }}</small></p>
+          {% endif %}
+          <p><small>{{ book.description }}</small></p>
+        </div>
+      </a>
     </div>
-  </div>
   {% endfor %}
 </section>
 
